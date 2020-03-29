@@ -1,7 +1,7 @@
 listen: 8000
 provider:
   type: "rpc"
-  uri: "https://mainnet.infura.io/v3/de9ceb7b7fea4c8db8afe991fdaed59d"
+  uri: "https://ropsten.infura.io/v3/de9ceb7b7fea4c8db8afe991fdaed59d"
 
 apiKey: "erick"
 
@@ -11,5 +11,4 @@ invoices:
 public:
   contracts:
     ZCRT: 
-      address: "0xC7e43A1c8E118aA2965F5EAbe0e718D83DB7A63C" # Mainnet
-      # address: "0xC4375B7De8af5a38a93548eb8453a498222C4fF2" ZCRT token on Kovan network
+      address: "0x28858bb770de1e7689045117ff99c286ed24ea55"
