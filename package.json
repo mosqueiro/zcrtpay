@@ -64,5 +64,9 @@
     "request": "^2.88.0",
     "sass-loader": "^7.1.0",
     "shortid": "^2.2.14"
+  },
+  "engines": {
+    "node": "13.6.0",
+    "npm": "6.13.4"
   }
 }
