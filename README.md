@@ -21,7 +21,7 @@ I've been involved with payment processing in Bitcoin in some way for a long tim
 
 Run the below commands:
 
-    git clone https://github.com/codevet/zcrtpay.git
+    git clone https://github.com/mosqueiro/zcrtpay.git
     cd zcrtpay
     npm install
 
