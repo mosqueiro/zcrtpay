@@ -1,14 +1,14 @@
-import db from '../connector'
+import db from "../connector";
 
 const InvoiceItem = {
   description: String,
   quantity: Number,
   amount: Number
-}
+};
 
 const InvoiceCallback = {
   url: String
-}
+};
 
 const DepositAddressSchema = new db.Schema({
   _id: {
@@ -19,7 +19,7 @@ const DepositAddressSchema = new db.Schema({
   created: Number,
   privateKey: String,
   usedBy: String // invoice Id
-})
+});
 
 const InvoiceSchema = new db.Schema({
   _id: {
@@ -54,7 +54,7 @@ const InvoiceSchema = new db.Schema({
   },
   notified: {
     type: Number,
-    optional: true  
+    optional: true
   },
   callbacks: {
     token: String,
@@ -63,12 +63,11 @@ const InvoiceSchema = new db.Schema({
   state: String,
   deposit: {
     _id: String,
-    address: String 
+    address: String
   }
-})
-InvoiceSchema.index({state:1})
-DepositAddressSchema.index({invoiceId:1})
+});
+InvoiceSchema.index({ state: 1 });
+DepositAddressSchema.index({ invoiceId: 1 });
 
-export const DepositAddress = db.model('DepositAddress', DepositAddressSchema)
-export const Invoice = db.model('Invoice', InvoiceSchema)
-
+export const DepositAddress = db.model("DepositAddress", DepositAddressSchema);
+export const Invoice = db.model("Invoice", InvoiceSchema);

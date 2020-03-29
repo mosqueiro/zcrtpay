@@ -1,9 +1,9 @@
-listen: 80
+listen: 3333
 provider:
   type: "rpc"
-  uri: "http://localhost:8545"
+  uri: "https://ropsten.infura.io/v3/d7abd15cee994b058394679cfe2eff7a"
 
-apiKey: "CHANGEME"
+apiKey: "zcrttestnet"
 
 invoices:
   minConfirmations: 1

@@ -1,17 +1,20 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
-var conn
+var conn;
 
 if (!conn) {
-  process.on('unhandledRejection', function(reason, promise) {
+  process.on("unhandledRejection", function(reason, promise) {
     console.log(promise);
   });
-  const url = process.env.MONGO_URL || (typeof __TEST__ != 'undefined' && __TEST__ ? 'mongodb://localhost/zcrtpay_test' : 'mongodb://localhost/zcrtpay')
-  console.log(`connecting to ${url}`)
-  mongoose.connect(url, { useNewUrlParser: true })
-  mongoose.Promise = global.Promise
-  conn = mongoose
+  const url =
+    process.env.MONGO_URI ||
+    (typeof __TEST__ != "undefined" && __TEST__
+      ? "mongodb://localhost/zcrtpay_test"
+      : "mongodb://localhost/zcrtpay");
+  console.log(`connecting to ${url}`);
+  mongoose.connect(url, { useNewUrlParser: true });
+  mongoose.Promise = global.Promise;
+  conn = mongoose;
 }
 
-export default conn
-
+export default conn;
