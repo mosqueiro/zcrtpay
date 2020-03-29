@@ -94,9 +94,7 @@ Invoices can be created by sending a POST request to the /api/v1/invoice endpoin
 
 An example with curl (replace API_KEY with the apiKey from the config file):
 
-        curl http://localhost:8000/api/v1/invoice --header "Content-Type: application/json" -X POST -d '{"apiKey":"API_KEY","items":[{"description":"My item","amount":1}]}'
-
-        curl http://localhost:8000/api/v1/invoice --header "Content-Type: application/json" -X POST -d '{"apiKey":"erick","callbacks":{"token":"ttttt","paid":{"url":"https://zcore.network"}},"items":[{"description":"Meu Item 2","amount":0.002}]}'
+        curl http://localhost:8000/api/v1/invoice --header "Content-Type: application/json" -X POST -d '{"apiKey":"API_KEY","callbacks":{"token":"ttttt","paid":{"url":"https://zcore.network"}},"items":[{"description":"Meu Item 2","amount":0.002}]}'
 
 The backend will create a new invoice record and return its id
 
