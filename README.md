@@ -94,20 +94,20 @@ Invoices can be created by sending a POST request to the /api/v1/invoice endpoin
 
 An example with curl (replace API_KEY with the apiKey from the config file):
 
-        curl http://localhost:8000/api/v1/invoice --header "Content-Type: application/json" -X POST -d '{"apiKey":"API_KEY","callbacks":{"token":"ttttt","paid":{"url":"https://zcore.network"}},"items":[{"description":"Meu Item 2","amount":0.002}]}'
+        curl http://localhost:80/api/v1/invoice --header "Content-Type: application/json" -X POST -d '{"apiKey":"API_KEY","callbacks":{"token":"ttttt","paid":{"url":"https://zcore.network"}},"items":[{"description":"Meu Item 2","amount":0.002}]}'
 
 The backend will create a new invoice record and return its id
 
         {"invoiceId":"bfuWuYgRs"}
 
 
-The invoice can be viewed in a browser at http://localhost:8000/invoice/bfuWuYgRs
+The invoice can be viewed in a browser at http://localhost:80/invoice/bfuWuYgRs
 
-![ZCRTPay invoice](https://i.imgur.com/EGsJTPe.png)
+![ZCRTPay invoice](https://zcore.network/add-zcrt/zcrtpay-screen.png)
 
 Also, the invoice record can be accessed via REST API:
 
-        curl http://localhost:8000/api/v1/invoice/bfuWuYgRs
+        curl http://localhost:80/api/v1/invoice/bfuWuYgRs
 
 
         {"deposit":{"_id":"xm-8-8lThd","address":"0xE6F2392Fe8ED75f684cb93fA0e278f0E404a8522"},"_id":"bfuWuYgRs","items":[{"description":"item #1","amount":1}],"totalAmount":1,"paidAmount":0,"created":1548735086893,"state":"pending","__v":0}
