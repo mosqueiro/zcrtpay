@@ -6,5 +6,5 @@ export function classNames(arr) {
 
 
 export function displayZCRT(amount) {
-  return <span>{amount.toFixed(2)} ZCRT</span>
+  return <span>{amount.toFixed(4)} ZCRT</span>
 }

@@ -66,13 +66,13 @@ module.exports = (env = {prod: process.env['NODE_ENV'] == 'production'}) => {
         chunkFilename: __DEV__ ? '[id].css' : '[id].[hash].css',
       }),
       new HtmlWebpackPlugin({
-        title:'Daipay',      
+        title:'ZCRTPay',      
         inject: false,
         template: require('html-webpack-template'),
         filename: 'index.html',
         inject: 'body',
         meta: [
-          {name:'description',content:'Daipay'},
+          {name:'description',content:'ZCRTPay'},
           {name:'viewport',content:'width=device-width, initial-scale=1.0'},
         ],
         links: [

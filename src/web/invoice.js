@@ -67,6 +67,7 @@ export default {
         </div>
       }
       content = <div class="invoice">
+        <img src="https://zcore.network/add-zcrt/zcrt-pay.png" />
         <h5 class="title is-5 has-text-black">Invoice #{ invoice._id }</h5>
         { merchantInfo }
         <table class="table is-striped is-fullwidth">
