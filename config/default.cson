@@ -1,9 +1,9 @@
-listen: 8000
+listen: 80
 provider:
   type: "rpc"
-  uri: "https://ropsten.infura.io/v3/de9ceb7b7fea4c8db8afe991fdaed59d"
+  uri: "http://localhost:8545"
 
-apiKey: "erick"
+apiKey: "CHANGEME"
 
 invoices:
   minConfirmations: 1

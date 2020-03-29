@@ -28,6 +28,7 @@ router.post('/invoice', async (ctx, next) => {
 })
 
 router.get('/invoice/:id', async (ctx, next) => {
+  //console.log(ctx.params.id)
   const invoice = await Invoices.getInvoice(ctx.params.id) 
   ctx.body = invoice
 })
