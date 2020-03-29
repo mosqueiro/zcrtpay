@@ -59,6 +59,7 @@
     "koa-mount": "^4.0.0",
     "koa-router": "^7.4.0",
     "live-server": "^1.2.1",
+    "lodash": "^4.17.15",
     "mongoose": "^5.4.1",
     "qrcode": "^1.3.3",
     "request": "^2.88.0",
