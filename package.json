@@ -10,7 +10,7 @@
     "dev": "webpack --config ./tools/app.webpack.config.js --mode development && npm-run-all --parallel watch devserver",
     "build": "NODE_ENV=production webpack --config ./tools/app.webpack.config.js --mode production --verbose",
     "build-scripts": "NODE_ENV=production ./node_modules/.bin/webpack --config ./tools/scripts.webpack.config.js",
-    "start": "NODE_ENV=production node ./dist/server"
+    "start": "node ./dist/server"
   },
   "author": "",
   "license": "mit",
