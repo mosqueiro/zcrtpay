@@ -1,37 +1,41 @@
-import Router from 'koa-router'
-import Invoices from './invoice/manager'
-import { validateInvoiceForm } from '../common/validators'
-import config from 'config'
+import Router from "koa-router";
+import Invoices from "./invoice/manager";
+import { validateInvoiceForm } from "../common/validators";
+import config from "config";
 
-const router = new Router()
+const router = new Router();
 
-router.get('/version', (ctx,next) => {
-  ctx.body = 'v1'
-})
+router.get("/version", (ctx, next) => {
+  ctx.body = "v1";
+});
 
-router.post('/invoice', async (ctx, next) => {
-  const form = ctx.request.body
-  if (config.apiKey && (config.apiKey !== form.apiKey) )
-    ctx.throw(403, 'invalid token')
-  const errors = validateInvoiceForm(form)
+router.post("/invoice", async (ctx, next) => {
+  const form = ctx.request.body;
+  // if (config.apiKey && config.apiKey !== form.apiKey)
+  //   ctx.throw(403, "invalid token");
+  if (
+    (process.env.API_KEY && process.env.API_KEY !== form.apiKey) ||
+    (config.apiKey && config.apiKey !== form.apiKey)
+  )
+    ctx.throw(403, "invalid token");
+  const errors = validateInvoiceForm(form);
   if (errors.length) {
     ctx.body = {
       errors
-    }
-    return
+    };
+    return;
   }
-  form.expires = form.expires || Date.now() + 24 * 60 * 60000
-  const invoice = await Invoices.createInvoice(form) 
+  form.expires = form.expires || Date.now() + 24 * 60 * 60000;
+  const invoice = await Invoices.createInvoice(form);
   ctx.body = {
     invoiceId: invoice._id
-  }
-})
+  };
+});
 
-router.get('/invoice/:id', async (ctx, next) => {
+router.get("/invoice/:id", async (ctx, next) => {
   //console.log(ctx.params.id)
-  const invoice = await Invoices.getInvoice(ctx.params.id) 
-  ctx.body = invoice
-})
+  const invoice = await Invoices.getInvoice(ctx.params.id);
+  ctx.body = invoice;
+});
 
-
-export default router
+export default router;
