@@ -14,7 +14,13 @@
   },
   "author": "",
   "license": "mit",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "webpack": "^4.28.2",
+    "webpack-node-externals": "^1.7.2",
+    "mini-css-extract-plugin": "^0.5.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mkdirp": "^0.5.1",
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
@@ -32,14 +38,7 @@
     "npm-run-all": "^4.1.5",
     "solc": "^0.5.2",
     "supertest": "^3.3.0",
-    "webpack-cli": "^3.1.2"
-  },
-  "dependencies": {
-    "webpack": "^4.28.2",
-    "webpack-node-externals": "^1.7.2",
-    "mini-css-extract-plugin": "^0.5.0",
-    "html-webpack-plugin": "^3.2.0",
-    "mkdirp": "^0.5.1",
+    "webpack-cli": "^3.1.2",
     "@babel/runtime": "^7.2.0",
     "@hyperapp/router": "^0.7.1",
     "bignumber.js": "^8.0.1",
