@@ -7,7 +7,7 @@ if (!conn) {
     console.log(promise);
   });
   const url =
-    process.env.MONGODB_URI ||
+    process.env.MONGODB ||
     (typeof __TEST__ != "undefined" && __TEST__
       ? "mongodb://localhost/zcrtpay_test"
       : "mongodb://localhost/zcrtpay");
