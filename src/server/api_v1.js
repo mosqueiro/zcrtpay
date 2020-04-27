@@ -16,7 +16,8 @@ router.post("/invoice", async (ctx, next) => {
   if (
     process.env.API_KEY &&
     process.env.API_KEY !== form.apiKey
-    // || (config.apiKey && config.apiKey !== form.apiKey)
+    // config.apiKey &&
+    // config.apiKey !== form.apiKey
   )
     ctx.throw(403, "invalid token");
   const errors = validateInvoiceForm(form);
