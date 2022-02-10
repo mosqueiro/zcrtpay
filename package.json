@@ -33,7 +33,7 @@
     "html-webpack-template": "^6.2.0",
     "koa-webpack": "^5.1.1",
     "mocha": "^5.2.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.18.9",
     "npm-run-all": "^4.1.5",
     "solc": "^0.5.2",
